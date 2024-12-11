@@ -1,9 +1,11 @@
 def mijn_functie_1(a):
-    print(a **2)
+    print(a * a)
     
 def mijn_functie_2(a, b):
-    print(a+b)
-    print(a-b)
-    print(a*b)
-    print(a/b)
+    uitvoer_lijst = []
+    uitvoer_lijst.append(a+b)
+    uitvoer_lijst.append(a-b)
+    uitvoer_lijst.append(a*b)
+    uitvoer_lijst.append(a/b)
+    return uitvoer_lijst
 
