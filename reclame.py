@@ -9,10 +9,12 @@ def aanbieding_1(smaak, prijs, korting):
     uitvoer = (f"Vandaag in de aanbieding: emmertje ijs(1 liter) in de smaak {smaak},van {prijs} voor {prijs * 1-korting} euro.")
     return uitvoer
     
-def inkomsten_totaal(ma, di, wo, do, vr, za, zo, btw):
-    totaal = ma+di+wo+do+vr+za+zo
-    btw = (totaal * (1+btw) -totaal)
-    uitvoer = (f"Het totaal van alle inkomsten van deze week is {totaal} euro, waarover {btw} euro btw betaald dient te worden")
+def inkomsten_totaal(inkomsten, btw):
+    totaal = 0
+    for bedrag in inkomsten:
+    totaal += bedrag
+    btw_bedrag = totaal * btw
+    uitvoer = f"Het totaal van alle inkomsten van deze week is {totaal} euro, waarover {btw_bedrag} euro btw betaald dient te worden."
     return uitvoer
     
 def laag_en_hoog(mijn_lijst):
